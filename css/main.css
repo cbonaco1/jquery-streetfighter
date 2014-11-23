@@ -1,0 +1,58 @@
+body {
+	background-color: black;
+}
+
+.main {
+	background-color: white;
+	padding-left: 100px;
+	margin-top: 110px;
+	height:500px;
+	min-width: 1200px;
+}
+
+.main .ryu {
+	float:left;
+}
+
+.ryu-still, .ryu-ready, .ryu-throwing {
+	/* note these are same dimensions as pics in images folders= */
+	width:659px;
+	height:494px;
+}
+
+/* difference between using background image or <img src> ? */
+.ryu-still {
+	background-image: url('../images/ryu-standing-still.png');
+}
+
+.ryu-ready {
+	background-image: url('../images/ryu-ready-position.gif');
+}
+
+.ryu-throwing {
+	background-image: url('../images/ryu-throwing-hadouken.png');
+}
+
+/* display:none hides these classes */
+.ryu-ready, .ryu-throwing {
+	display: none;
+}
+
+.hadouken, .ryu-still, .ryu-ready, .ryu-throwing {
+	background-repeat: no-repeat;
+}
+
+.main .hadouken {
+	background-image: url("../images/hadouken.gif");
+	width: 156px;
+	height: 90px;
+	display: none;
+
+	/*setting position to relative sets the top and left settings relative
+	to where this element is. In thise case it is in the hadouken class. 
+	If it were absolute, then the positions are of the entire page. */
+	position: relative;
+	top: 167px;
+	left: -129px;
+	float: left;
+}
