@@ -15,7 +15,7 @@ body {
 }
 
 .ryu-still, .ryu-ready, .ryu-throwing {
-	/* note these are same dimensions as pics in images folders= */
+	/* note these are same dimensions as pics in images folders */
 	width:659px;
 	height:494px;
 }
@@ -47,7 +47,7 @@ body {
 	width: 156px;
 	height: 90px;
 	display: none;
-
+	
 	/*setting position to relative sets the top and left settings relative
 	to where this element is. In thise case it is in the hadouken class. 
 	If it were absolute, then the positions are of the entire page. */
