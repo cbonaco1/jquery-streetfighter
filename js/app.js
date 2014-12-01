@@ -1,11 +1,11 @@
 $(document).ready(function(){
 	$(".ryu").mouseenter(function(){
+		$("[class^='ryu-']").hide();
 		$(".ryu-ready").show();
-		$(".ryu-still").hide();
 	})
 
 	.mouseleave(function(){
-		$(".ryu-ready").hide();
+		$("[class^='ryu-']").hide();
 		$(".ryu-still").show();
 	})
 
@@ -13,8 +13,9 @@ $(document).ready(function(){
 		//play sound
 		playHadouken();
 		
-		//show throwing and hadouken
-		$(".ryu-ready").hide();
+		//hide others, show throwing and hadouken
+		$("[class^='ryu-']").hide();
+		$(".how-to").hide();
 		$(".ryu-throwing").show();
 		
 		//animate hadouken to slide across page
@@ -36,9 +37,27 @@ $(document).ready(function(){
 
 	.mouseup(function(){
 		//show standing
-		$(".ryu-throwing").hide();
-		$(".ryu-ready").show();
+		$("[class^='ryu-']").hide();
 		$(".hadouken").hide();
+		$(".ryu-ready").show();
+		$(".how-to").show();
+	});
+
+	//show cool pose when user presses 'x' key
+	$(document).keydown(function(event){
+		if(event.which == 88){
+			//hide other classes and show cool
+			//select all classes that start with ryu-
+			$("[class^='ryu-']").hide();
+			$(".ryu-cool").show();
+		}
+	});
+	$(document).keyup(function(event){
+		if(event.which == 88){
+			//hide cool and show still
+			$(".ryu-still").show();
+			$(".ryu-cool").hide();
+		}
 	});
 });
 

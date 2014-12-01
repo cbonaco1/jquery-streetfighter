@@ -14,7 +14,7 @@ body {
 	float:left;
 }
 
-.ryu-still, .ryu-ready, .ryu-throwing {
+.ryu-still, .ryu-ready, .ryu-throwing, .ryu-cool {
 	/* note these are same dimensions as pics in images folders */
 	width:659px;
 	height:494px;
@@ -33,12 +33,16 @@ body {
 	background-image: url('../images/ryu-throwing-hadouken.png');
 }
 
+.ryu-cool {
+	background-image: url('../images/ryu-cool.gif');
+}
+
 /* display:none hides these classes */
-.ryu-ready, .ryu-throwing {
+.ryu-ready, .ryu-throwing, .ryu-cool {
 	display: none;
 }
 
-.hadouken, .ryu-still, .ryu-ready, .ryu-throwing {
+.hadouken, .ryu-still, .ryu-ready, .ryu-throwing, .ryu-cool {
 	background-repeat: no-repeat;
 }
 
@@ -47,7 +51,7 @@ body {
 	width: 156px;
 	height: 90px;
 	display: none;
-	
+
 	/*setting position to relative sets the top and left settings relative
 	to where this element is. In thise case it is in the hadouken class. 
 	If it were absolute, then the positions are of the entire page. */
@@ -55,4 +59,37 @@ body {
 	top: 167px;
 	left: -129px;
 	float: left;
+}
+
+.how-to {
+	/*border:1px solid blue;*/
+	position: absolute;
+	left:650px;
+	height: 425px;
+	width: 600px;
+	padding-top:75px;
+	font-family: "MV Boli";
+	font-size: 40px;
+	text-transform: uppercase;
+}
+
+.how-to .press {
+	margin-left: 275px;
+	margin-top: 30px;
+}
+
+.signature {
+	padding-top: 0.5em;
+	color: white;
+	float: right;
+	text-align: right;
+	font-family: "MV Boli";
+}
+
+.signature #jquery-title {
+	font-size: 26px;
+}
+
+.signature #name {
+	font-size:18px;
 }
